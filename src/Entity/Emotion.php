@@ -5,7 +5,6 @@ use App\Entity\Feeling;
 
 use Doctrine\ORM\Mapping as ORM;
 
-#[ORM\Entity(repositoryClass: MeublesRepository::class)]
 /**
  * Emotion
  *
@@ -31,15 +30,15 @@ class Emotion
      */
     private $content;
 
-    // /**
-    //  * @var \Feeling
-    //  *
-    //  * @ORM\ManyToOne(targetEntity="Feeling")
-    //  * @ORM\JoinColumns({
-    //  *   @ORM\JoinColumn(name="id_feeling", referencedColumnName="id")
-    //  * })
-    //  */
-    // private $idFeeling;
+    /**
+     * @var Feeling
+     *
+     * @ORM\ManyToOne(targetEntity="Feeling")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_feeling", referencedColumnName="id")
+     * })
+     */
+    private $idFeeling;
 
     public function getId(): ?int
     {
@@ -50,6 +49,13 @@ class Emotion
     {
         return $this->content;
     }
-
+    public function getIdFeeling(): ?Feeling
+    {
+        return $this->idFeeling;
+    }
+    public function getFeelingCategory(): ?string
+    {
+        return $this->idFeeling->getCategory();
+    }
 
 }

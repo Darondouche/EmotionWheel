@@ -22,7 +22,9 @@ class EmotionController extends AbstractController
         foreach ($emotions as $emotion) {
             $data[] = [
                 'id' => $emotion ->getId(),
-                'content' => $emotion ->getContent()
+                'content' => $emotion ->getContent(),
+                'id_feeling' => $emotion ->getIdFeeling(),
+                'category_feeling' => $emotion ->getFeelingCategory()
             ];
         }
         // Return the $data array as a JSON response

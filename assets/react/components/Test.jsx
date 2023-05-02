@@ -17,7 +17,7 @@ function Test() {
             <h1>Liste des emotions</h1>
             <ul>
                 {emotions.map(emotion => (
-                    <li key={emotion.id}>{emotion.content}</li>
+                        <li key={emotion.id}>{emotion.content} {emotion.id_feeling.id} {emotion.category_feeling}</li>
                 ))}
             </ul>
         </div>
