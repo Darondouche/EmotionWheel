@@ -1,9 +1,11 @@
 <?php
 
-namespace “AppEntity”;
+namespace App\Entity;
+use App\Entity\Feeling;
 
 use Doctrine\ORM\Mapping as ORM;
 
+#[ORM\Entity(repositoryClass: MeublesRepository::class)]
 /**
  * Emotion
  *
@@ -29,15 +31,25 @@ class Emotion
      */
     private $content;
 
-    /**
-     * @var \Feeling
-     *
-     * @ORM\ManyToOne(targetEntity="Feeling")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="id_feeling", referencedColumnName="id")
-     * })
-     */
-    private $idFeeling;
+    // /**
+    //  * @var \Feeling
+    //  *
+    //  * @ORM\ManyToOne(targetEntity="Feeling")
+    //  * @ORM\JoinColumns({
+    //  *   @ORM\JoinColumn(name="id_feeling", referencedColumnName="id")
+    //  * })
+    //  */
+    // private $idFeeling;
+
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getContent(): ?string
+    {
+        return $this->content;
+    }
 
 
 }
