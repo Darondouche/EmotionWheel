@@ -29,5 +29,13 @@ class Feeling
      */
     private $category;
 
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
 
+    public function getCategory(): ?string
+    {
+        return $this->category;
+    }
 }
