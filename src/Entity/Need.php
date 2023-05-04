@@ -39,5 +39,14 @@ class Need
      */
     private $idFeeling;
 
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getContent(): ?string
+    {
+        return $this->content;
+    }
 
 }

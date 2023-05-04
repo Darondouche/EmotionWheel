@@ -39,5 +39,18 @@ class Sensation
      */
     private $idFeeling;
 
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
 
+    public function getContent(): ?string
+    {
+        return $this->content;
+    }
+    public function getIdFeeling(): ?Feeling
+    {
+        return $this->idFeeling;
+    }
+    
 }
