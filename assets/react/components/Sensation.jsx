@@ -1,17 +1,9 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react'
+import Sensation from './Api'
 
-function Sensation() {
-    const [sensations, setSensations] = useState([]);
-
-    useEffect(() => {
-        fetch('/sensation')
-            .then(response => response.json())
-            .then(data => setSensations(data))
-            .catch(error => console.error(error));
-    }, []);
-
+export function Sensation() {
     return (
         <div>
             <h1>Liste des sensations</h1>
@@ -23,5 +15,3 @@ function Sensation() {
         </div>
     );
 }
-
-export default Sensation;
