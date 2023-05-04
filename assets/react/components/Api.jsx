@@ -2,7 +2,7 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { useState, useEffect } from 'react';
 
-export function Sensation() {
+export function FetchSensation() {
     const [sensations, setSensations] = useState([]);
 
     useEffect(() => {
@@ -12,19 +12,10 @@ export function Sensation() {
             .catch(error => console.error(error));
     }, []);
 
-    return (
-        <div>
-            <h1>Liste des sensations</h1>
-            <ul>
-                {sensations.map(sensation => (
-                        <li key={sensation.id}>{sensation.content}</li>
-                ))}
-            </ul>
-        </div>
-    );
+    return sensations
 }
 
-export function Feeling() {
+export function FetchFeeling() {
     const [feelings, setFeelings] = useState([]);
 
     useEffect(() => {
@@ -34,19 +25,10 @@ export function Feeling() {
             .catch(error => console.error(error));
     }, []);
 
-    return (
-        <div>
-            <h1>Liste des feelings</h1>
-            <ul>
-                {feelings.map(feeling => (
-                        <li key={feeling.id}>{feeling.category}</li>
-                ))}
-            </ul>
-        </div>
-    );
+    return feelings
 }
 
-export function Emotion() {
+export function FetchEmotion() {
     const [emotions, setEmotions] = useState([]);
 
     useEffect(() => {
@@ -56,19 +38,10 @@ export function Emotion() {
             .catch(error => console.error(error));
     }, []);
 
-    return (
-        <div>
-            <h1>Liste des emotions</h1>
-            <ul>
-                {emotions.map(emotion => (
-                        <li key={emotion.id}>{emotion.content}</li>
-                ))}
-            </ul>
-        </div>
-    );
+    return emotions
 }
 
-export function Need() {
+export function FetchNeed() {
     const [needs, setNeeds] = useState([]);
 
     useEffect(() => {
@@ -78,14 +51,5 @@ export function Need() {
             .catch(error => console.error(error));
     }, []);
 
-    return (
-        <div>
-            <h1>Liste des besoins</h1>
-            <ul>
-                {needs.map(need => (
-                        <li key={need.id}>{need.content}</li>
-                ))}
-            </ul>
-        </div>
-    );
+    return needs
 }
