@@ -11,9 +11,9 @@ export default function Sensation() {
             <h1>Liste des sensations</h1>
             <ul style ={{listStyleType : "none"}}>
                 {data.map(sensation => (
-                    <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id={sensation.id_feeling.id}/>
-                    <label class="form-check-label" for="flexRadioDefault1">
+                    <div className="form-check">
+                    <input className="form-check-input" type="radio" name="flexRadioDefault" id={sensation.id_feeling.id}/>
+                    <label className="form-check-label" for="flexRadioDefault1">
                         <li key={sensation.id}>{sensation.content}</li>
                     </label>
                   </div>

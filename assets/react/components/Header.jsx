@@ -1,24 +1,31 @@
-import React from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import React from 'react';
+import LogoFeelit from '../../images/logo_feelit.png';
 
-export default function Header() {
-  return (
-    <div className="container-fluid">
-        <nav className="navbar navbar-expand-lg bg-light">
-            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarNav">
-                <ul className="navbar-nav">
-                    <li className="nav-item">
-                        <a className="nav-link" href="/">Home</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="/about">About</a>
-                    </li>
-                </ul>
+function Navbar() {
+    return (
+      <nav className="bg-white shadow-sm p-3 fixed top-0 left-0 w-full">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between">
+            <div className="text-black font-bold">
+              <img src={LogoFeelit} className="Logo h-10" alt="logo"/>
             </div>
-        </nav>
-    </div>
-  )
-}
+            <ul className="flex space-x-6">
+              <li>
+                <a href="#" className="font-inter text-gray-800 hover:text-gray-300">
+                  À propos
+                </a>
+              </li>
+              <li>
+                <a href="#" className="font-inter text-gray-800 hover:text-gray-300">
+                  Glossaire
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    );
+};
+  
+export default Navbar;
+  
