@@ -1,3 +1,21 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
 body {
-    background-color: lightgray;
+    background-color: white;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../../public/fonts/Inter-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter Bold';
+    src: url('../../public/fonts/Inter-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
 }

@@ -8,9 +8,11 @@
         "@symfony/ux-react": "file:vendor/symfony/ux-react/assets",
         "@symfony/webpack-encore": "^4.0.0",
         "core-js": "^3.23.0",
+        "postcss-loader": "^7.3.0",
         "react": "^18.0",
         "react-dom": "^18.0",
         "regenerator-runtime": "^0.13.9",
+        "tailwindcss": "^3.3.2",
         "webpack": "^5.74.0",
         "webpack-cli": "^4.10.0",
         "webpack-notifier": "^1.15.0"
@@ -24,7 +26,9 @@
         "build": "encore production --progress"
     },
     "dependencies": {
+        "autoprefixer": "^10.4.14",
         "bootstrap": "^5.2.3",
+        "postcss": "^8.4.23",
         "react-bootstrap": "^2.7.2"
     }
 }
