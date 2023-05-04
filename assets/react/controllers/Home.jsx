@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../components/Header'
-import { Sensation, Feeling, Emotion, Need } from '../components/Api'
+import Sensation from '../components/Sensation'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 export default function Home() {
