@@ -1,6 +1,9 @@
 import React from 'react'
 import Header from '../components/Header'
-import Test from '../components/Test'
+import Emotion from '../components/Emotion'
+import Sensation from '../components/Sensation'
+import Feeling from '../components/Feeling'
+import Need from '../components/Need'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 export default function Home() {
@@ -10,7 +13,10 @@ export default function Home() {
         <div className="container">
             <h1>HOM PAGE</h1>
         </div>
-        <Test />
+        <Sensation />
+        <Feeling />
+        <Emotion />
+        <Need />
     </div>
   )
 }

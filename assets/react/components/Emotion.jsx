@@ -2,7 +2,7 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { useState, useEffect } from 'react';
 
-function Test() {
+function Emotion() {
     const [emotions, setEmotions] = useState([]);
 
     useEffect(() => {
@@ -17,11 +17,11 @@ function Test() {
             <h1>Liste des emotions</h1>
             <ul>
                 {emotions.map(emotion => (
-                        <li key={emotion.id}>{emotion.content} {emotion.id_feeling.id} {emotion.category_feeling}</li>
+                        <li key={emotion.id}>{emotion.content}</li>
                 ))}
             </ul>
         </div>
     );
 }
 
-export default Test;
+export default Emotion;
