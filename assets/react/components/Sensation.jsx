@@ -9,11 +9,17 @@ export default function Sensation() {
     return (
         <div>
             <h1>Liste des sensations</h1>
-            <ul>
+            <ul style ={{listStyleType : "none"}}>
                 {data.map(sensation => (
+                    <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id={sensation.id_feeling.id}/>
+                    <label class="form-check-label" for="flexRadioDefault1">
                         <li key={sensation.id}>{sensation.content}</li>
+                    </label>
+                  </div>
                 ))}
             </ul>
         </div>
     );
 }
+
